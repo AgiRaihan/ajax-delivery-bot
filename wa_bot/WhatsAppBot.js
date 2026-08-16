@@ -25,7 +25,7 @@ class WhatsAppBot {
             this.sock = makeWASocket({
                 logger: pino({ level: 'silent' }),
                 auth: state,
-                browser: ['Ajax Bot', 'Chrome', '90.0.4430.93'],
+                browser: ['Ubuntu', 'Chrome', '20.0.04'],
                 syncFullHistory: false,
                 markOnlineOnConnect: true,
                 retryRequestDelayMs: 100,
