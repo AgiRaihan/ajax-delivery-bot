@@ -3,7 +3,7 @@ const pino = require('pino');
 const fs = require('fs');
 const Config = require('./Config');
 const MessageHandler = require('./MessageHandler');
-const qrcode = require('qrcode-terminal');
+const qrcode = require('qrcode');
 
 class WhatsAppBot {
     constructor() {
@@ -76,7 +76,10 @@ class WhatsAppBot {
         const { connection, lastDisconnect, qr } = update;
 
         if (qr) {
-            // qrcode.generate(qr, { small: true });
+            global.botStatus = 'Menunggu scan QR Code...';
+            qrcode.toDataURL(qr, (err, url) => {
+                if (!err) global.qrDataUrl = url;
+            });
         }
 
         if (connection === 'close') {
@@ -92,6 +95,8 @@ class WhatsAppBot {
             }
         } else if (connection === 'open') {
             this.reconnectAttempts = 0;
+            global.botStatus = 'Terkoneksi!';
+            global.qrDataUrl = null;
             console.log('\n✅ Bot WhatsApp berhasil terhubung!');
             console.log('🟢 Status: AKTIF - Ready menerima pesan');
             console.log(new Date().toLocaleString());
