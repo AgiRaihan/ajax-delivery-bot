@@ -86,7 +86,8 @@ class WhatsAppBot {
             if (shouldReconnect) {
                 this.handleReconnect();
             } else {
-                console.log('Logout terdeteksi. Silahkan hapus folder auth dan jalankan bot kembali untuk login ulang.');
+                console.log('Logout terdeteksi. Menghapus folder auth yang rusak agar bisa login ulang...');
+                try { fs.rmSync(Config.authFolder, { recursive: true, force: true }); } catch (e) {}
                 process.exit(1);
             }
         } else if (connection === 'open') {
