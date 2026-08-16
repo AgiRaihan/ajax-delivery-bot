@@ -1,0 +1,15 @@
+# Abaikan semua file dan folder secara default
+/*
+
+# KECUALI file dan folder khusus bot WhatsApp ini:
+!/wa_bot/
+!/package.json
+!/package-lock.json
+!/ecosystem.config.js
+!/BOT_24_7_SETUP.md
+!/.gitignore
+
+# Pastikan folder rahasia/berat milik bot tetap tidak ikut terbawa:
+node_modules/
+auth_info_baileys/
+.env

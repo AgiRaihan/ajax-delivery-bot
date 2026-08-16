@@ -1,0 +1,31 @@
+{
+  "name": "ajax_deliver_sumedang",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node wa_bot/index.js",
+    "start:bot": "node wa_bot/index.js",
+    "dev:bot": "pm2 start wa_bot/index.js --name ajax-bot --watch --max-memory-restart 500M",
+    "stop:bot": "pm2 stop ajax-bot",
+    "restart:bot": "pm2 restart ajax-bot",
+    "logs:bot": "pm2 logs ajax-bot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc14",
+    "pino": "^10.3.1",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "pm2": "^5.3.0"
+  }
+}
