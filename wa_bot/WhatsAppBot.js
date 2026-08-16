@@ -32,7 +32,7 @@ class WhatsAppBot {
             });
 
             this.reconnectAttempts = 0;
-            // this.handlePairing(); // Dimatikan agar menggunakan QR Code
+            this.handlePairing(); // Menggunakan Pairing Code agar cocok di Railway
             this.setupEvents(saveCreds);
 
         } catch (error) {
@@ -76,8 +76,7 @@ class WhatsAppBot {
         const { connection, lastDisconnect, qr } = update;
 
         if (qr) {
-            console.log('\n📱 Scan QR Code ini dengan WhatsApp Anda (Buka ukuran terminal lebih besar):');
-            qrcode.generate(qr, { small: true });
+            // qrcode.generate(qr, { small: true });
         }
 
         if (connection === 'close') {
