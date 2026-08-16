@@ -42,8 +42,10 @@ class WhatsAppBot {
     }
 
     handlePairing() {
+        if (this.pairingTimer) clearTimeout(this.pairingTimer);
         if (!this.sock.authState.creds.registered) {
-            setTimeout(async () => {
+            this.pairingTimer = setTimeout(async () => {
+                if (this.sock.authState.creds.registered) return;
                 try {
                     console.log('\n========================================');
                     console.log('Meminta kode pairing dari WhatsApp...');
@@ -94,6 +96,7 @@ class WhatsAppBot {
                 process.exit(1);
             }
         } else if (connection === 'open') {
+            if (this.pairingTimer) clearTimeout(this.pairingTimer);
             this.reconnectAttempts = 0;
             global.botStatus = 'Terkoneksi!';
             global.qrDataUrl = null;
