@@ -8,6 +8,7 @@
 !/ecosystem.config.js
 !/BOT_24_7_SETUP.md
 !/.gitignore
+!/README.md
 
 # Pastikan folder rahasia/berat milik bot tetap tidak ikut terbawa:
 node_modules/
