@@ -1,9 +1,15 @@
-# 🛵 Ajax Delivery WhatsApp Bot
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:339933,100:25D366&height=200&section=header&text=Ajax%20Delivery%20Bot&fontSize=50&fontColor=ffffff&desc=Automated%20WhatsApp%20Assistant&descSize=16&animation=fadeIn" alt="Banner" width="100%" />
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)
-![Status](https://img.shields.io/badge/status-Active-success.svg)
-![Node.js](https://img.shields.io/badge/node-%3E%3D%2018.0.0-brightgreen.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+  > **Asisten WhatsApp otomatis 24/7 yang dirancang khusus untuk layanan pesan antar makanan (Delivery).**
+
+  ![Version](https://img.shields.io/badge/version-1.1.0-blue.svg?style=for-the-badge)
+  ![Status](https://img.shields.io/badge/status-Active-success.svg?style=for-the-badge)
+  ![Node.js](https://img.shields.io/badge/node-%3E%3D%2018.0.0-brightgreen.svg?style=for-the-badge&logo=nodedotjs)
+  ![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)
+</div>
+
+<br/>
 
 ## 📖 Tentang Proyek (About)
 **Ajax Delivery Bot** adalah asisten WhatsApp otomatis yang dirancang khusus untuk menangani layanan pesan antar makanan (Delivery) di daerah Sumedang. Bot ini bertugas layaknya *Customer Service* yang beroperasi 24 jam non-stop untuk menerima pesanan, memberikan daftar menu, dan meneruskan pesanan ke grup *driver* secara sistematis.
